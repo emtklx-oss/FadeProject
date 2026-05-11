@@ -20,7 +20,7 @@ namespace FadeProject
     internal class WorldObject
     {
         //Every object in game will be a type of this. 
-        private Point Position; {  get; set; }
+        private Point Position {  get; set; }
         public Size ObjSize { get; set; } //Pixel Dimensions. If the object is 32 x 32px this is 32 x 32
         public ObjectType ObjectType { get; private set; }
 
