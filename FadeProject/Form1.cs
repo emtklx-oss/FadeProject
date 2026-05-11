@@ -27,10 +27,6 @@ namespace FadeProject
 
         }
 
-        // ---- UI elements updated seperately
-        private void InterfacePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

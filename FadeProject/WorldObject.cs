@@ -33,9 +33,10 @@ namespace FadeProject
         {
             Point tempPos = new Point( Position.X +  deltaX, Position.Y + deltaY );
             if (deltaX <= 0 || deltaY <= 0) return false;
-            if ()
+           
 
             Position = tempPos;
+            return true;
         }
         public bool IsColliding()
         {
