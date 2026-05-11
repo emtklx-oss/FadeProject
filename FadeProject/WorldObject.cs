@@ -15,6 +15,7 @@ namespace FadeProject
         Player,
         Item,
         Projectile,
+        Scroll
 
     }
     internal class WorldObject
@@ -32,16 +33,17 @@ namespace FadeProject
         public bool TryMove(int deltaX, int deltaY)
         {
             Point tempPos = new Point( Position.X +  deltaX, Position.Y + deltaY );
-            if (deltaX <= 0 || deltaY <= 0) return false;
-           
+            if (deltaX <= 0 && deltaY <= 0) return false; // didnt move at all
+            
 
             Position = tempPos;
             return true;
         }
-        public bool IsColliding()
+        public bool IsColliding(WorldObject otherObj)
         {
-
-            return false;
+            if (otherObj == null) return false;
+            //Create a rectangle for both objects, that outlines the edges of the objects graphic
+            return new Rectangle(this.Position, this.ObjSize).IntersectsWith(new Rectangle(otherObj.Position, otherObj.ObjSize));
         }
     }
 }
