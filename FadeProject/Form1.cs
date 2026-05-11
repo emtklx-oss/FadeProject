@@ -19,6 +19,7 @@ namespace FadeProject
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // Fries and chicken
 
         }
 
